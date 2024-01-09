@@ -35,7 +35,7 @@ It is highly encouraged that you simply fork this entire repo and then just sync
 
 If you would like to make a correction or a fix (either to this page or the associated jupyter notebooks/data) please submit a pull request. I'll review and merge and then hopefully, everyone taking this class benefits!
 
-The direct link to the actual repository is [https://github.com/gryslik/gradtda5622] (https://github.com/gryslik/gradtda5622).
+The direct link to the actual repository is here: [https://github.com/gryslik/gradtda5622](https://github.com/gryslik/gradtda5622).
 
 ## Grading Plan: 
 1. Homework x5: 30%
