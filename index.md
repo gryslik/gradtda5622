@@ -36,7 +36,7 @@ It is highly encouraged that you simply fork this entire repo and then just sync
 3. Final Project: 20%
 4. Participation: 10%
 
-There might be tentative bonus points assigned for harder math or cs problems. Max would be at most 2-3% per problem.
+There might be tentative bonus points assigned for harder math or cs problems. Max would be at most 2-3% per problem. 
 
 ## Homeworks
 <table class="display" border=1 frame=sides rules=all>
