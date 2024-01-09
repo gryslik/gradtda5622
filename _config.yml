@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: CSE 5622
+title: GRADTDA 5622
 email: ryslik.1@osu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Big Data Computing Foundations II
-baseurl: "/cse5622" # the subpath of your site, e.g. /blog
-url: "https://gryslik.github.io/cse5622/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/gradtda5622" # the subpath of your site, e.g. /blog
+url: "https://gryslik.github.io/gradtda5622/" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 github:
