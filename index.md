@@ -25,10 +25,17 @@ Slack Link				 | See email invite.
 
 
 
+
 ## Description: 
 This class aims to introduce ways to mine and analyze data for people that are data related fields but are not necessarily computer scientists or data scientists. This webpage will serve as a source of content for the course and will eventually house the homeworks and project code files.
 	
 It is highly encouraged that you simply fork this entire repo and then just sync updates periodically. This will provide you the easiest access to all the updated code at once. For more information on this process, you can see the documentation [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo). 
+
+## Github Repository Details
+
+If you would like to make a correction or a fix (either to this page or the associated jupyter notebooks/data) please submit a pull request. I'll review and merge and then hopefully, everyone taking this class benefits!
+
+The direct link to the actual repository is [https://github.com/gryslik/gradtda5622] (https://github.com/gryslik/gradtda5622).
 
 ## Grading Plan: 
 1. Homework x5: 30%
