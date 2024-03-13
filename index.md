@@ -79,6 +79,24 @@ There might be tentative bonus points assigned for harder math or cs problems. M
   {% endfor %}
 </table>
 
+
+## Synchronous Class Notebooks
+<table class="display" border=1 frame=sides rules=all>
+  {% for row in site.data.SyncClass %}
+    {% if forloop.first %}
+    <tr>
+      {% for pair in row %}
+        <th>{{ pair[0] }}</th>
+      {% endfor %}
+    </tr>
+    {% endif %}
+
+    {% tablerow pair in row %}
+      {{ 	pair[1] }}
+    {% endtablerow %}
+  {% endfor %}
+</table>
+
 ## Final
 <table class="display" border=1 frame=sides rules=all>
   {% for row in site.data.Final %}
