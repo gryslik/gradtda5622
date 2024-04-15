@@ -1,17 +1,50 @@
 name: Push Event Workflow
 
-on: push
+on:
+  push:
+    branches:
+      - development
 
 jobs:
-  unit-testing:
+  test_code_1:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Code test 1
+        uses: actions/checkout@v3
+        with:
+          ref: development
 
-      - name: Install Packages
+      - name: Install Packages 1
         run: pip install pytest
 
-      - name: Run tests
-        run: pytest tests/test_mathy_stuff.py
+      - name: Run tests 1
+        run: pytest tests/test_mathy_stuff1.py
+
+  test_code_2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code test 2
+        uses: actions/checkout@v3
+        with:
+          ref: development
+
+      - name: Install Packages 2
+        run: pip install pytest
+
+      - name: Run tests 2
+        run: pytest tests/test_mathy_stuff2.py
+
+  test_code_3:
+    runs-on: ubuntu-latest
+    needs: [test_code_1, test_code_2]
+    steps:
+      - name: Code test combined
+        uses: actions/checkout@v3
+        with:
+          ref: development
+      - name: Install Packages 3
+        run: pip install pytest
+      - name: Run tests 3
+        run: pytest tests/test_mathy_stuff3.py
