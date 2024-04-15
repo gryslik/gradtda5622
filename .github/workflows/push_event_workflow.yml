@@ -3,8 +3,8 @@ name: Push Event Workflow
 on:
   push:
     branches:
-      - "main"
-      - "development" #working on the development branch
+      - main
+      - development
 
 jobs:
   build-and-push:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Packages
         run: pip install pytest
