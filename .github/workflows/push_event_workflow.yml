@@ -3,7 +3,7 @@ name: Push Event Workflow
 on:
   push:
     branches:
-      - development #working on the development branch
+      - "development" #working on the development branch
 
 jobs:
   build-and-push:
