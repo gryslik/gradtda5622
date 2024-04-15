@@ -29,10 +29,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: development
       - name: push to git
         run: |
           git config --global user.name 'Greg Ryslik'
           git config --global user.email 'gryslik@gmail.com'
-          git merge origin/development --no-ff --no-edit
+          git checkout main
+          git pull origin main
+          git merge development
           git push origin main
