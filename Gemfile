@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem "jekyll", "~> 3.9"
   gem "jekyll-feed", "~> 0.6"
   gem "kramdown-parser-gfm"
+  gem "jekyll-last-modified-at"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -34,3 +35,5 @@ gem 'jekyll-redirect-from'
 
 gem "webrick", "~> 1.7"
 gem "commonmarker", ">= 0.23.4"
+
+

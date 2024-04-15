@@ -1,9 +1,12 @@
 name: Push Event Workflow
 
-on: push
+on:
+  push:
+    branches:
+      - development #working on the development branch
 
 jobs:
-  unit-testing:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,3 +18,12 @@ jobs:
 
       - name: Run tests
         run: pytest tests/test_mathy_stuff.py
+
+      - name: Push to main
+        if: success()
+        run: |
+          git config --global user.name 'Greg Ryslik'
+          git config --global user.email 'gryslik@gmail.com'
+          git checkout main
+          git merge development
+          git push origin main
