@@ -7,24 +7,33 @@ on:
       - development
 
 jobs:
-  build-and-push:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: development
 
       - name: Install Packages
         run: pip install pytest
 
       - name: Run tests
         run: pytest tests/test_mathy_stuff.py
-
-      - name: Push to main
-        if: success()
+  push-to-main:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/development' && success()
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: "development"
+      - name: push to git
         run: |
           git config --global user.name 'Greg Ryslik'
           git config --global user.email 'gryslik@gmail.com'
-          git checkout "main"
+          git checkout main
           git merge development
           git push origin main
