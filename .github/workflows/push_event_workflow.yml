@@ -3,11 +3,10 @@ name: Push Event Workflow
 on:
   push:
     branches:
-      - main
       - development
 
 jobs:
-  test:
+  test-and-merge:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,20 +20,13 @@ jobs:
 
       - name: Run tests
         run: pytest tests/test_mathy_stuff.py
-  push-to-main:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/development' && success()
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          ref: development
-      - name: push to git
+
+      - name: Merge devel into main
+        if: success()
         run: |
-          git config --global user.name 'Greg Ryslik'
-          git config --global user.email 'gryslik@gmail.com'
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git fetch origin main:main
           git checkout main
-          git pull origin main
-          git merge development
+          git merge --ff-only devel
           git push origin main
