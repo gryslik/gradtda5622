@@ -29,5 +29,5 @@ jobs:
           git fetch origin main:main          
           git checkout main
           git reset --hard origin/main
-          git merge development --allow-unrelated-histories -m "Merging into main"
+          git merge development --no-commit --no-ff --allow-unrelated-histories -m "Merging into main"
           git push origin main
