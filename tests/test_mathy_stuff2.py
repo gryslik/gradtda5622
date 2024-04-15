@@ -1,3 +1,6 @@
+from math_stuff.math_utils import divide
+
+
 def test_divide_negative_numbers() -> None:
     """
     Test that divide returns the correct result when given a positive and
