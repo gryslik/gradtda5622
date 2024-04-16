@@ -34,6 +34,6 @@ gem 'jekyll-redirect-from'
 
 
 gem "webrick", "~> 1.7"
-gem "commonmarker", ">= 0.23.4"
+gem "commonmarker", ">= 0.23.6"
 
 
