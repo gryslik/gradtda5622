@@ -120,6 +120,6 @@ There might be tentative bonus points assigned for harder math or cs problems. M
 
 </table>
 
-#### Testing some text
+#### Testing some text2
 
 {{ page.last_modified_at }}
